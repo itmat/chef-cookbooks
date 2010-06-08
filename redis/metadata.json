@@ -1,0 +1,258 @@
+{
+    "version": "0.1.0",
+    "conflicting": {
+    },
+    "providing": {
+    },
+    "description": "Installs and configures RabbitMQ server",
+    "attributes": {
+      "redis/address": {
+        "required": "optional",
+        "calculated": false,
+        "choice": [
+
+        ],
+        "default": "0.0.0.0",
+        "type": "string",
+        "recipes": [
+
+        ],
+        "description": "IP address to bind.  The default is any.",
+        "display_name": "Redis server IP address"
+      },
+      "redis/master_port": {
+        "required": "optional",
+        "calculated": false,
+        "choice": [
+
+        ],
+        "default": "6379",
+        "type": "string",
+        "recipes": [
+
+        ],
+        "description": "The master server port for this replication slave.  The default is 6379.",
+        "display_name": "Redis replication master server port"
+      },
+      "redis/pidfile": {
+        "required": "optional",
+        "calculated": false,
+        "choice": [
+
+        ],
+        "default": "/var/run/redis.pid",
+        "type": "string",
+        "recipes": [
+
+        ],
+        "description": "Path to the PID file when daemonized.  The default is /var/run/redis.pid.",
+        "display_name": "Redis PID file path"
+      },
+      "redis/client_timeout": {
+        "required": "optional",
+        "calculated": false,
+        "choice": [
+
+        ],
+        "default": "300",
+        "type": "string",
+        "recipes": [
+
+        ],
+        "description": "Timeout, in seconds, for disconnection of idle clients.  The default is 300 (5 minutes).",
+        "display_name": "Redis client timeout"
+      },
+      "redis/dbfile": {
+        "required": "optional",
+        "calculated": false,
+        "choice": [
+
+        ],
+        "default": "dump.rdb",
+        "type": "string",
+        "recipes": [
+
+        ],
+        "description": "Filename for the database storage.  The default is dump.rdb.",
+        "display_name": "Redis database filename"
+      },
+      "redis/port": {
+        "required": "optional",
+        "calculated": false,
+        "choice": [
+
+        ],
+        "default": "6379",
+        "type": "string",
+        "recipes": [
+
+        ],
+        "description": "TCP port to bind.  The default is 6379.",
+        "display_name": "Redis server port"
+      },
+      "redis/password": {
+        "required": "optional",
+        "calculated": false,
+        "choice": [
+
+        ],
+        "default": false,
+        "type": "string",
+        "recipes": [
+
+        ],
+        "description": "Lock down the redis server with a password.  The default is foobared.",
+        "display_name": "Redis server password"
+      },
+      "redis/saves": {
+        "required": "optional",
+        "calculated": false,
+        "choice": [
+
+        ],
+        "default": "[[900, 1], [300, 10], [60, 10000]]",
+        "type": "string",
+        "recipes": [
+
+        ],
+        "description": "An array of arrays of time, changed objects policies for persisting data to disk.  The default is [[900, 1], [300, 10], [60, 10000]].",
+        "display_name": "Redis disk persistence policies"
+      },
+      "redis/master_server": {
+        "required": "optional",
+        "calculated": false,
+        "choice": [
+
+        ],
+        "default": "master-redis.domain",
+        "type": "string",
+        "recipes": [
+
+        ],
+        "description": "The master server for this replication slave.  The default is master-redis.domain.",
+        "display_name": "Redis replication master server name"
+      },
+      "redis/slave": {
+        "required": "optional",
+        "calculated": false,
+        "choice": [
+
+        ],
+        "default": "no",
+        "type": "string",
+        "recipes": [
+
+        ],
+        "description": "Act as a replication slave to a master redis database.  The default is no.",
+        "display_name": "Redis replication slave"
+      },
+      "redis/logfile": {
+        "required": "optional",
+        "calculated": false,
+        "choice": [
+
+        ],
+        "default": "/var/log/redis.log",
+        "type": "string",
+        "recipes": [
+
+        ],
+        "description": "Path to the log file when daemonized.  The default is /var/log/redis.log.",
+        "display_name": "Redis log file path"
+      },
+      "redis/sharedobjects": {
+        "required": "optional",
+        "calculated": false,
+        "choice": [
+
+        ],
+        "default": "no",
+        "type": "string",
+        "recipes": [
+
+        ],
+        "description": "Attempt to reduce memory use by sharing storage for substrings.  The default is no.",
+        "display_name": "Redis shared object compression"
+      },
+      "redis/glueoutputbuf": {
+        "required": "optional",
+        "calculated": false,
+        "choice": [
+
+        ],
+        "default": "yes",
+        "type": "string",
+        "recipes": [
+
+        ],
+        "description": "Glue small output buffers together into larger TCP packets.  The default is yes.",
+        "display_name": "Redis output buffer coalescing"
+      },
+      "redis/dbdir": {
+        "required": "optional",
+        "calculated": false,
+        "choice": [
+
+        ],
+        "default": "/var/lib/redis",
+        "type": "string",
+        "recipes": [
+
+        ],
+        "description": "Path to the directory for database files.  The default is /var/lib/redis.",
+        "display_name": "Redis database directory"
+      },
+      "redis": {
+        "required": "optional",
+        "calculated": false,
+        "choice": [
+
+        ],
+        "type": "hash",
+        "recipes": [
+
+        ],
+        "description": "Hash of Redis attributes",
+        "display_name": "Redis"
+      },
+      "redis/shareobjectspoolsize": {
+        "required": "optional",
+        "calculated": false,
+        "choice": [
+
+        ],
+        "default": "1024",
+        "type": "string",
+        "recipes": [
+
+        ],
+        "description": "The size of the pool for object sharing.  The default is 1024.",
+        "display_name": "Redis shared object pool size"
+      }
+    },
+    "replacing": {
+    },
+    "dependencies": {
+    },
+    "groupings": {
+    },
+    "long_description": "",
+    "recommendations": {
+    },
+    "platforms": {
+      "debian": [
+
+      ],
+      "ubuntu": [
+
+      ]
+    },
+    "maintainer": "Benjamin Black",
+    "name": "redis",
+    "recipes": {
+    },
+    "suggestions": {
+    },
+    "license": "Apache 2.0",
+    "maintainer_email": "b@b3k.us"
+  }

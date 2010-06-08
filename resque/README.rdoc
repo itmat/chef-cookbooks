@@ -1,0 +1,12 @@
+= DESCRIPTION:
+
+Installs a Resque server
+
+= REQUIREMENTS:
+
+Redis + Ruby
+
+= ATTRIBUTES:
+
+= USAGE:
+

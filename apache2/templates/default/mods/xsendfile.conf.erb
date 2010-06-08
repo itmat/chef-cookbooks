@@ -1,0 +1,4 @@
+<IfModule mod_xsendfile.c>
+  XSendFile <%= @node[:apache][:xsendfile] %>
+  XSendFileAllowAbove  <%= @node[:apache][:xsendfile_allow_above] %>
+</IfModule>
