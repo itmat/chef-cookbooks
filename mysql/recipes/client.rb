@@ -42,6 +42,11 @@ when "centos","redhat", "suse"
   end
 
 else
+  r = gem_package "mysql" do
+    action :nothing
+  end
+
+  r.run_action(:install)
   r = gem_package "mysql2" do
     action :nothing
   end
