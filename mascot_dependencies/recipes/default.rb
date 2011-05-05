@@ -18,13 +18,17 @@
 #
 
 # dependencies
+include_recipe "s3sync"
 include_recipe "perl"
 include_recipe "gd2"
 include_recipe "htdig"
-# packages to install via apt
-package "perl-modules"
+include_recipe "pigz"
+
+# perl packages to install via apt
 package "libwww-perl"
-package "libmime-tools-perl"
-package "liburi-perl"
-package "libdigest-perl"
-package "libgd-gd2-perl"
+package "libgd-gd2-noxmp-perl"
+
+# mascot CGI scripts expects perl to be in /usr/local/bin
+link "/usr/local/bin/perl" do 
+  to "/usr/bin/perl"
+end

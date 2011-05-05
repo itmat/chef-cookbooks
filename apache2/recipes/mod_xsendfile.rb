@@ -1,4 +1,4 @@
-Chef recipe to install mod_xsendfile to Ubuntu i386.
+# Chef recipe to install mod_xsendfile to Ubuntu i386.
 remote_file "/tmp/mod_xsendfile.c" do
   source "mod_xsendfile.c"
 end

@@ -17,6 +17,5 @@
 # limitations under the License.
 #
 
-package "libgd2"
-package "libgd-dev"
-package "libgd-tools"
+package "libgd2-noxpm"
+package "libgd-noxpm-dev"
